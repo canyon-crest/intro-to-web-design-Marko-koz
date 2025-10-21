@@ -1,70 +1,77 @@
+/* Palette A (applied without :root variables).
+	 Primary: #0B6EAF, Accent: #FF7A59, Text: #233044 */
+:root{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
 body {
-font-family: Arial, sans-serif;
-line-height: 1.6;
-margin: 0;
-padding: 0;
-background-color: #fafafa;
-color: #333;
+	font-family: Arial, sans-serif;
+	line-height: 1.45; 
+	background-color: #E6F7FF;
+	color: #233044;
+	font-size: 15px; 
 }
 
 .container {
-width: 80%;
-margin: auto;
-padding: 20px;
-border: 2px solid #ddd;
-background-color: white;
+	width: 86%;
+	max-width: 980px;
+	margin: 12px auto; 
+	padding: 12px; 
+	border: 1px solid rgba(11,110,175,0.12); 
+	background-color: #FFFFFF;
 }
 
 h1 {
-text-align: center;
-border-bottom: 2px solid #444;
-padding-bottom: 10px;
+	text-align: center;
+	border-bottom: 1px solid #0B6EAF;
+	padding: 6px 0 8px; 
+	font-size: 1.6rem;
+	color: #0B6EAF;
 }
 
 h2 {
-color: #444;
-margin-top: 30px;
+	color: rgba(11,110,175,0.8); 
+	margin: 18px 0 10px;
+	font-size: 1.15rem;
 }
 
 h3 {
-color: #666;
-font-style: italic;
+	color: rgba(11,110,175,0.55);
+	font-style: italic;
+	margin: 8px 0 6px;
+	font-size: 1rem;
 }
 
 .section {
-margin-bottom: 20px;
-padding: 10px;
-border-left: 4px solid #aaa;
+	margin-bottom: 12px;
+	padding: 8px;
+	border-left: 3px solid rgba(11,110,175,0.22);
 }
 
-/* Class selectors to meet autograder */
-.name-origin {
-background-color: #f0f8ff;
-}
-.origin-me {
-background-color: #f9f9f9;
-}
-.likes {
-background-color: #fffaf0;
-}
 
-/* Float images */
+.name-origin { background-color: #f0f8ff; }
+.origin-me   { background-color: #f9f9f9; }
+.likes       { background-color: #fffaf0; }
+
+
 .gallery img {
-width: 30%;
-margin: 10px;
-float: left;
-border: 1px solid #ccc;
+	width: 30%;
+	margin: 6px;
+	float: left;
+	border: 1px solid #ccc;
 }
 
-/* Anchor styling and pseudo classes */
+
 a {
-text-decoration: none;
-color: #0056b3;
-margin-right: 15px;
-font-weight: bold;
+	text-decoration: none;
+	color: #0B6EAF;
+	margin-right: 8px; /* reduced gap */
+	font-weight: 600;
+	font-size: 0.95rem;
 }
 a:hover {
-color: #ff6600;
+	color: #FF7A59;
 }
 a:visited {
 color: #800080;
@@ -73,22 +80,36 @@ a:active {
 color: red;
 }
 
-/* Responsive design (3 media queries) */
+
 @media (max-width: 1200px) {
-body { font-size: 18px; }
+body { font-size: 18px; 
+	background-color: #FF7A59;
+}
+h3 {
+	color:rgb(40, 35, 64);
+}
 }
 @media (max-width: 800px) {
-body { font-size: 16px; }
+body { font-size: 16px;
+background-color: #ff5f37;}
 .gallery img { width: 45%; }
+h3 {
+	color:rgb(40, 35, 64);
+}
 }
 @media (max-width: 500px) {
-body { font-size: 14px; }
+body { font-size: 14px;
+background-color: #ff3300; }
 .gallery img { width: 100%; }
+h3 {
+	color:rgb(40, 35, 64);
+}
 }
 
 
 p {
-padding: 5px;
-margin: 10px 0;
-border: 1px solid transparent;
+	padding: 4px 2px;
+	margin: 8px 0;
+	border: 1px solid transparent;
+	font-size: 0.95rem;
 }
