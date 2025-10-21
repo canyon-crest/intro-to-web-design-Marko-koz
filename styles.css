@@ -24,10 +24,23 @@ body {
 
 h1 {
 	text-align: center;
-	border-bottom: 1px solid #0B6EAF;
-	padding: 6px 0 8px; 
-	font-size: 1.6rem;
-	color: #0B6EAF;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: rainbow 8s linear infinite;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes rainbow {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 h2 {
@@ -62,6 +75,26 @@ h3 {
 	border: 1px solid #ccc;
 }
 
+/* Bloom-on-hover */
+.section img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: transform 300ms ease, filter 300ms ease, box-shadow 300ms ease;
+    transform-origin: center;
+    filter: brightness(0.95) saturate(0.98);
+    cursor: zoom-in;
+    border-radius: 6px;
+}
+
+/* Bloom effect */
+.section img:hover,
+.section img:focus {
+    transform: scale(1.08);
+    filter: brightness(1.08) saturate(1.15);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    outline: none;
+}
 
 a {
 	text-decoration: none;
